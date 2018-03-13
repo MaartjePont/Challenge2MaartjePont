@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
             minutes = '0' + minutes;
         }
 
+        // welcome text and image
         if (hours == 8) {
             text = "Goedemorgen Maartje, het is tijd om op te staan!";
         } 
@@ -50,11 +51,20 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         else if (hours == 22) {
             text = "Goedenavond Maartje, het is tijd om te relaxen!";
+            document.getElementById("activity-image").src = "styles/images/relax.png";
         }
         else if (hours == 23) {
             text = "Goedenavond Maartje, het is tijd om naar bed te gaan!";
+            document.getElementById("activity-image").src = "styles/images/sleep.png";
         }
 
+        // background color
+        if (hours >= 6 && hours < 18) {
+            document.body.style.backgroundColor = "#60BDFF";
+        } else {
+            document.body.style.backgroundColor = "#00123D";
+            document.body.style.color = "white";
+        }
 
         currentTime.innerHTML = hours + ':' + minutes;
         currentDate.textContent = day + ' ' + date + ' ' + month;
