@@ -1,0 +1,11 @@
+#clock {
+	font-family: Baskerville, serif; 
+}
+
+#current-time {
+	font-size: 6em;
+}
+
+#current-date {
+	font-size: 2em;
+}
