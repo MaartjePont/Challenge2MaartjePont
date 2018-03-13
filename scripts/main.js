@@ -24,37 +24,46 @@ document.addEventListener('DOMContentLoaded', function(){
         // welcome text and image
         if (hours == 8) {
             text = "Goedemorgen Maartje, het is tijd om op te staan!";
+            document.getElementById("activity-image").src = "styles/images/hi.png";
         } 
         else if (hours == 9) {
             text = "Goedemorgen Maartje, het is tijd om te ontbijten!";
+            document.getElementById("activity-image").src = "styles/images/ontbijt.png";
         }
         else if (hours >= 10 && hours < 12) {
             text = "Goedemorgen Maartje, het is tijd om naar muziekles te gaan!";
+            document.getElementById("activity-image").src = "styles/images/music.png";
         }
         else if (hours >= 12 && hours < 15) {
             text = "Goedemiddag Maartje, het is tijd om te lunchen!";
+            document.getElementById("activity-image").src = "styles/images/lunch.png";
         }
         else if (hours == 15) {
             text = "Goedemiddag Maartje, het is snacktime!";
+            document.getElementById("activity-image").src = "styles/images/snack.png";
         }
         else if (hours == 16) {
             text = "Goedemiddag Maartje, het is koffietijd!";
+            document.getElementById("activity-image").src = "styles/images/coffee.png";
         }
         else if (hours == 17) {
             text = "Goedemiddag Maartje, het is tijd om te sporten!";
+            document.getElementById("activity-image").src = "styles/images/sport.png";
         }
         else if (hours >= 18 && hours < 21) {
             text = "Goedenavond Maartje, het is tijd om avond te eten!";
+            document.getElementById("activity-image").src = "styles/images/food.png";
         }
         else if (hours == 21) {
             text = "Goedenavond Maartje, het is tijd om je hond uit te laten!";
+            document.getElementById("activity-image").src = "styles/images/dog.png";
         }
         else if (hours == 22) {
             text = "Goedenavond Maartje, het is tijd om te relaxen!";
             document.getElementById("activity-image").src = "styles/images/relax.png";
         }
         else if (hours == 23) {
-            text = "Goedenavond Maartje, het is tijd om naar bed te gaan!";
+            text = "Goedenavond Maartje, het is tijd om te slapen!";
             document.getElementById("activity-image").src = "styles/images/sleep.png";
         }
 
