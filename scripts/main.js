@@ -34,9 +34,13 @@ document.addEventListener('DOMContentLoaded', function(){
             text = "Goedemorgen Maartje, het is tijd om naar muziekles te gaan!";
             document.getElementById("activity-image").src = "styles/images/music.png";
         }
-        else if (hours >= 12 && hours < 15) {
+        else if (hours >= 12 && hours < 14) {
             text = "Goedemiddag Maartje, het is tijd om te lunchen!";
             document.getElementById("activity-image").src = "styles/images/lunch.png";
+        }
+        else if (hours == 14) {
+            text = "Goedemiddag Maartje, het is tijd om je hond uit te laten!";
+            document.getElementById("activity-image").src = "styles/images/dog.png";
         }
         else if (hours == 15) {
             text = "Goedemiddag Maartje, het is snacktime!";
@@ -68,10 +72,26 @@ document.addEventListener('DOMContentLoaded', function(){
         }
 
         // background color
-        if (hours >= 6 && hours < 18) {
-            document.body.style.backgroundColor = "#60BDFF";
-        } else {
-            document.body.style.backgroundColor = "#00123D";
+        if (hours == 7) {
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 80%, #FFCA40)";
+        }
+        else if (hours == 8) {
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 70%, #FFCA40)";
+        }
+        else if (hours == 9) {
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 60%, #FFCA40)";
+        }
+        else if (hours >= 10 && hours < 17) {
+            document.body.style.backgroundImage = "linear-gradient(#1EA2FF, #60BDFF)";
+        }
+        else if (hours == 18) {
+            document.body.style.backgroundImage = "linear-gradient(#FFCA40, #60BDFF 70%)";
+        }
+        else if (hours == 19) {
+            document.body.style.backgroundImage = "linear-gradient(#FFCA40, #60BDFF 80%)";
+        }
+        else { 
+            document.body.style.backgroundImage = "linear-gradient(#00081C, #00123D)";
             document.body.style.color = "white";
         }
 
