@@ -66,9 +66,16 @@ document.addEventListener('DOMContentLoaded', function(){
             text = "Goedenavond Maartje, het is tijd om te relaxen!";
             document.getElementById("activity-image").src = "styles/images/relax.png";
         }
-        else if (hours == 23) {
+        else if (hours >= 23 && hours < 8) {
             text = "Goedenavond Maartje, het is tijd om te slapen!";
             document.getElementById("activity-image").src = "styles/images/sleep.png";
+        }
+
+        // show sun or moon
+        if (hours >= 7 && hours < 20) {
+            document.getElementById("moon").style.display = "none";
+        } else {
+            document.getElementById("sun").style.display = "none";
         }
 
         // background color
@@ -95,6 +102,8 @@ document.addEventListener('DOMContentLoaded', function(){
             document.body.style.color = "white";
         }
 
+        // de stand van de zon of maan (kan met if else en postie geven of met tweenmax)
+
         currentTime.innerHTML = hours + ':' + minutes;
         currentDate.textContent = day + ' ' + date + ' ' + month;
         welcomeText.textContent = text;
@@ -112,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         var dayNames = [
             'Zondag', 'Maandag', 'Dinsdag', 'Woensdag',
-            'Dnderdag', 'Vrijdag', 'Zaterdag'
+            'Donderdag', 'Vrijdag', 'Zaterdag'
         ];
 
         return dayNames[w];
@@ -138,5 +147,5 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 });
 
-
 })();
+

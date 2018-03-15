@@ -1,9 +1,28 @@
 html {
 	height: 100%;
 }
+
 body {
 	font-family: Avenir, sans-serif;
 	font-size: 15px;
+}
+
+#sun {
+	width: 85px;
+  	height: 85px;
+  	background: linear-gradient(#FFBC0C, #FF8900);
+  	border-radius: 100%;
+  	margin: auto;
+  	margin-top: 20px;
+}
+
+#moon {
+	width: 85px;
+  	height: 85px;
+  	background: linear-gradient(#B7B7B7, #828282);
+  	border-radius: 100%;
+  	margin: auto;
+  	margin-top: 20px;
 }
 
 #welcome-text {
