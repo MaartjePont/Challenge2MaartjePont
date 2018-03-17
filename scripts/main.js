@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function(){
             text = "Goedenavond Maartje, het is tijd om te relaxen!";
             document.getElementById("activity-image").src = "styles/images/relax.png";
         }
-        else if (hours >= 23 && hours < 8) {
+        else {
             text = "Goedenavond Maartje, het is tijd om te slapen!";
             document.getElementById("activity-image").src = "styles/images/sleep.png";
         }
@@ -88,14 +88,14 @@ document.addEventListener('DOMContentLoaded', function(){
         else if (hours == 9) {
             document.body.style.backgroundImage = "linear-gradient(#60BDFF 60%, #FFCA40)";
         }
-        else if (hours >= 10 && hours < 17) {
+        else if (hours >= 10 && hours < 18) {
             document.body.style.backgroundImage = "linear-gradient(#1EA2FF, #60BDFF)";
         }
         else if (hours == 18) {
-            document.body.style.backgroundImage = "linear-gradient(#FFCA40, #60BDFF 70%)";
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 70%, #FFCA40)";
         }
         else if (hours == 19) {
-            document.body.style.backgroundImage = "linear-gradient(#FFCA40, #60BDFF 80%)";
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 80%, #FFCA40)";
         }
         else { 
             document.body.style.backgroundImage = "linear-gradient(#00081C, #00123D)";
@@ -109,9 +109,8 @@ document.addEventListener('DOMContentLoaded', function(){
         welcomeText.textContent = text;
     }, 1000);
         
- 
     function formatDay(w) {
-        w = parseInt(w, 5);
+        w = parseInt(w, 7);
 
         if (w < 0) {
             w = 0;
@@ -145,7 +144,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
         return monthNames[m];
     }
+
+    var tl1 = new TimelineMax();
+        tl1.to(welcomeText, 4, {fontSize: 22});
+
 });
 
 })();
-
