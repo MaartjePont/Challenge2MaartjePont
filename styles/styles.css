@@ -60,10 +60,10 @@ body {
 }
 
 @media screen and (min-width: 500px) {
-	.grid {
+	/*.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-	}
+	}*/
 }
 
 @media screen and (min-width: 769px) {
