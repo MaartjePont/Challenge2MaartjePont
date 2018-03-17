@@ -8,21 +8,23 @@ body {
 }
 
 #sun {
-	width: 85px;
-  	height: 85px;
+	width: 120px;
+  	height: 120px;
   	background: linear-gradient(#FFBC0C, #FF8900);
   	border-radius: 100%;
-  	margin: auto;
   	margin-top: 20px;
+  	z-index: -1;
+  	position: absolute;
 }
 
 #moon {
-	width: 85px;
-  	height: 85px;
+	width: 120px;
+  	height: 120px;
   	background: linear-gradient(#B7B7B7, #828282);
   	border-radius: 100%;
-  	margin: auto;
   	margin-top: 20px;
+  	z-index: -1;
+  	position: absolute;
 }
 
 #welcome-text {

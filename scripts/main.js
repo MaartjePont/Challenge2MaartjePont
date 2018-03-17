@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(event){
     var currentTime = document.getElementById('current-time'),
         currentDate = document.getElementById('current-date'),
         welcomeText = document.getElementById('welcome-text');
@@ -102,7 +102,45 @@ document.addEventListener('DOMContentLoaded', function(){
             document.body.style.color = "white";
         }
 
-        // de stand van de zon of maan (kan met if else en postie geven of met tweenmax)
+        // de stand van de zon of maan 
+        if (hours == 7 || hours == 19) {
+            document.getElementById("sun").style.bottom = "0%";
+        }
+        else if (hours == 8 || hours == 18) {
+            document.getElementById("sun").style.bottom = "17%";
+        }
+        else if (hours == 9 || hours == 17) {
+            document.getElementById("sun").style.bottom = "34%";
+        }
+        else if (hours == 10 || hours == 16) {
+            document.getElementById("sun").style.bottom = "51%";
+        }
+        else if (hours == 11 || hours == 15) {
+            document.getElementById("sun").style.bottom = "68%";
+        }
+        else if (hours == 12 || hours == 14) {
+            document.getElementById("sun").style.bottom = "85%";
+        }
+        else if (hours == 13) {
+            document.getElementById("sun").style.bottom = "100%";
+        }
+        else if (hours == 6 || hours == 20) {
+            document.getElementById("moon").style.bottom = "0%";
+        }
+        else if (hours == 5 || hours == 21) {
+            document.getElementById("moon").style.bottom = "20%";
+        }
+        else if (hours == 4 || hours == 22) {
+            document.getElementById("moon").style.bottom = "40%";
+        }
+        else if (hours == 3 || hours == 23) {
+            document.getElementById("moon").style.bottom = "60%";
+        }
+        else if (hours == 2 || hours == 24) {
+            document.getElementById("moon").style.bottom = "80%";
+        } else {
+            document.getElementById("moon").style.bottom = "100%";
+        }
 
         currentTime.innerHTML = hours + ':' + minutes;
         currentDate.textContent = day + ' ' + date + ' ' + month;
@@ -145,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function(){
         return monthNames[m];
     }
 
+    // animation
     var tl1 = new TimelineMax();
     tl1.to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
