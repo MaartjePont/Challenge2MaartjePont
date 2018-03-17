@@ -4,7 +4,7 @@ html {
 
 body {
 	font-family: Avenir, sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 #sun {
@@ -35,7 +35,7 @@ body {
 
 #welcome-text {
 	text-align: center;
-	margin: 20px auto 20px auto;
+	margin: 20px auto 0px auto;
 }
 
 #clock {
