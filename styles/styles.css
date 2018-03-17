@@ -62,13 +62,14 @@ body {
 @media screen and (min-width: 500px) {
 	#welcome-text {
 		font-size: 22px;
+		margin-bottom: 40px;
 	}
 	#activity-image {
 		max-width: 300px; 
+		margin-top: 40px;
 	}
 	#current-time {
 		font-size: 7em;
-		position: relative;
 	}
 	#current-date {
 		font-size: 2.5em;
