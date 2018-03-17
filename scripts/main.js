@@ -194,8 +194,11 @@ document.addEventListener('DOMContentLoaded', function(event){
         .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: 0, ease: Sine.easeInOut});
-
 
     /*var mySplitText = new SplitText("#welcome-text", {type:"chars, words, lines"}),
     tl = new TimelineMax();
