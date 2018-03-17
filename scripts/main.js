@@ -146,7 +146,39 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     var tl1 = new TimelineMax();
-        tl1.to(welcomeText, 4, {fontSize: 22});
+    tl1.to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 0, ease: Sine.easeInOut});
+
+
+    /*var welcomeText = document.getElementById("welcome-text");
+    welcomeText.innerHTML = "<span>" +
+    welcomeText.innerHTML.split("").join("</span><span>") + "</span>"
+
+    var mySplitText = new SplitText("#welcome-text", {type:"chars,words, lines"}),
+    tl = new TimelineMax();
+
+    
+    TweenMax.set("#welcome-text", {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
+
+    var numChars = mySplitText.chars.length;
+
+    for(var i = 0; i < numChars; i++){
+    tl.from(mySplitText.chars[i], 0.8, {css:{y:getRandomInt(-75, 75), x:getRandomInt(-150, 150), rotation:getRandomInt(0, 720), autoAlpha:0}, ease:Back.easeOut}, i * 0.02, "dropIn");
+    }
+        
+    tl.staggerTo(mySplitText.chars, 4, {css:{transformOrigin:"50% 50% -30px", rotationY:-360, rotationX:360, rotation:360}, ease:Elastic.easeInOut}, 0.02, "+=1");
+
+
+    function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }*/
+
 
 });
 
