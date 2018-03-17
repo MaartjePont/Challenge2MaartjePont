@@ -63,13 +63,23 @@ body {
 	#welcome-text {
 		font-size: 22px;
 	}
+	#activity-image {
+		max-width: 300px; 
+	}
+	#current-time {
+		font-size: 8em;
+		position: relative;
+	}
+	#current-date {
+		font-size: 3em;
+	}
 	#sun {
-		width: 200px;
-  		height: 200px;
+		width: 250px;
+  		height: 250px;
 	}
 	#moon {
-		width: 200px;
-  		height: 200px;
+		width: 250px;
+  		height: 250px;
 	}
 }
 
