@@ -80,25 +80,25 @@ document.addEventListener('DOMContentLoaded', function(event){
 
         // background color
         if (hours == 7) {
-            document.body.style.backgroundImage = "linear-gradient(#60BDFF 80%, #FFCA40)";
-        }
-        else if (hours == 8) {
             document.body.style.backgroundImage = "linear-gradient(#60BDFF 70%, #FFCA40)";
         }
-        else if (hours == 9) {
+        else if (hours == 8) {
             document.body.style.backgroundImage = "linear-gradient(#60BDFF 60%, #FFCA40)";
+        }
+        else if (hours == 9) {
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 50%, #FFCA40)";
         }
         else if (hours >= 10 && hours < 18) {
             document.body.style.backgroundImage = "linear-gradient(#1EA2FF, #60BDFF)";
         }
         else if (hours == 18) {
-            document.body.style.backgroundImage = "linear-gradient(#60BDFF 70%, #FFCA40)";
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 60%, #FFCA40)";
         }
         else if (hours == 19) {
-            document.body.style.backgroundImage = "linear-gradient(#60BDFF 80%, #FFCA40)";
+            document.body.style.backgroundImage = "linear-gradient(#60BDFF 70%, #FFCA40)";
         }
         else { 
-            document.body.style.backgroundImage = "linear-gradient(#00081C, #00123D)";
+            document.body.style.backgroundImage = "linear-gradient(#00081C, #001954)";
             document.body.style.color = "white";
         }
 
@@ -145,6 +145,8 @@ document.addEventListener('DOMContentLoaded', function(event){
         currentTime.innerHTML = hours + ':' + minutes;
         currentDate.textContent = day + ' ' + date + ' ' + month;
         welcomeText.textContent = text;
+        /*welcomeText.innerHTML = "<span>" +
+    welcomeText.innerHTML.split("").join("</span><span>") + "</span>";*/
     }, 1000);
         
     function formatDay(w) {
@@ -183,23 +185,19 @@ document.addEventListener('DOMContentLoaded', function(event){
         return monthNames[m];
     }
 
-    // animation
+    // animation clock: "tik-tak"
     var tl1 = new TimelineMax();
-    tl1.to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
-        .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
-        .to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
-        .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
-        .to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
-        .to(currentTime, 1, {left: -50, ease: Sine.easeInOut})
-        .to(currentTime, 1, {left: 50, ease: Sine.easeInOut})
+    tl1.to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
+        .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: 0, ease: Sine.easeInOut});
 
 
-    /*var welcomeText = document.getElementById("welcome-text");
-    welcomeText.innerHTML = "<span>" +
-    welcomeText.innerHTML.split("").join("</span><span>") + "</span>"
-
-    var mySplitText = new SplitText("#welcome-text", {type:"chars,words, lines"}),
+    /*var mySplitText = new SplitText("#welcome-text", {type:"chars, words, lines"}),
     tl = new TimelineMax();
 
     
