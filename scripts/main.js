@@ -2,20 +2,20 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function(event){
-    var currentTime = document.getElementById('current-time'),
-        currentDate = document.getElementById('current-date'),
-        welcomeText = document.getElementById('welcome-text');
-
+    var currentTime     = document.getElementById('current-time'),
+        currentDate     = document.getElementById('current-date'),
+        welcomeText     = document.getElementById('welcome-text'),
+        activityImage   = document.getElementById('activity-image');
 
     setInterval(function() {
         var d = new Date();
 
-        var hours = d.getHours(),
+        var hours   = d.getHours(),
             minutes = d.getMinutes(),
-            day = formatDay(d.getDay()),
-            month = formatMonth(d.getMonth()),
-            date = d.getDate(),
-            text = "";
+            day     = formatDay(d.getDay()),
+            month   = formatMonth(d.getMonth()),
+            date    = d.getDate(),
+            text    = "";
 
         if (minutes < 10) {
             minutes = '0' + minutes;
