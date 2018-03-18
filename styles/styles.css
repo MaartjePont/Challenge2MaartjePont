@@ -59,7 +59,7 @@ body {
     margin: 40px auto 20px auto;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 426px) {
 	#welcome-text {
 		font-size: 22px;
 		margin-bottom: 40px;
@@ -103,7 +103,7 @@ body {
 		grid-column: 2 / 3;
     	grid-row: 2 / 3;
     	margin-top: 20px;
-    	height: 300px;
+    	height: auto;
     	width: 300px;
 	}
 	#current-time {
@@ -115,5 +115,13 @@ body {
 }
 
 @media screen and (min-width: 1025px) {
-
+	#welcome-text {
+    	font-size: 34px;
+	}
+	#current-time {
+		font-size: 11em;
+	}
+	#current-date {
+		font-size: 4em;
+	}
 }

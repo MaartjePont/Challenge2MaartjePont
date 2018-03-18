@@ -30,7 +30,11 @@ document.addEventListener('DOMContentLoaded', function(event){
             text = "Goedemorgen Maartje, het is tijd om te ontbijten!";
             document.getElementById("activity-image").src = "styles/images/ontbijt.png";
         }
-        else if (hours >= 10 && hours < 12) {
+        else if (hours == 10) {
+            text = "Goedemiddag Maartje, het is tijd om je hond uit te laten!";
+            document.getElementById("activity-image").src = "styles/images/dog.png";
+        }
+        else if (hours == 11) {
             text = "Goedemorgen Maartje, het is tijd om naar muziekles te gaan!";
             document.getElementById("activity-image").src = "styles/images/music.png";
         }
@@ -119,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function(event){
             document.getElementById("sun").style.top = "20%";
         }
         else if (hours == 12 || hours == 14) {
-            document.getElementById("sun").style.top = "20%";
+            document.getElementById("sun").style.top = "10%";
         }
         else if (hours == 13) {
             document.getElementById("sun").style.top = "0%";
@@ -145,8 +149,6 @@ document.addEventListener('DOMContentLoaded', function(event){
         currentTime.innerHTML = hours + ':' + minutes;
         currentDate.textContent = day + ' ' + date + ' ' + month;
         welcomeText.textContent = text;
-        /*welcomeText.innerHTML = "<span>" +
-    welcomeText.innerHTML.split("").join("</span><span>") + "</span>";*/
     }, 1000);
         
     function formatDay(w) {
@@ -199,26 +201,6 @@ document.addEventListener('DOMContentLoaded', function(event){
         .to(currentTime, 1, {left: -40, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: 40, ease: Sine.easeInOut})
         .to(currentTime, 1, {left: 0, ease: Sine.easeInOut});
-
-    /*var mySplitText = new SplitText("#welcome-text", {type:"chars, words, lines"}),
-    tl = new TimelineMax();
-
-    
-    TweenMax.set("#welcome-text", {css:{perspective:500, perspectiveOrigin:"50% 50%", transformStyle:"preserve-3d"}});
-
-    var numChars = mySplitText.chars.length;
-
-    for(var i = 0; i < numChars; i++){
-    tl.from(mySplitText.chars[i], 0.8, {css:{y:getRandomInt(-75, 75), x:getRandomInt(-150, 150), rotation:getRandomInt(0, 720), autoAlpha:0}, ease:Back.easeOut}, i * 0.02, "dropIn");
-    }
-        
-    tl.staggerTo(mySplitText.chars, 4, {css:{transformOrigin:"50% 50% -30px", rotationY:-360, rotationX:360, rotation:360}, ease:Elastic.easeInOut}, 0.02, "+=1");
-
-
-    function getRandomInt (min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-    }*/
-
 
 });
 
