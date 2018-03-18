@@ -107,39 +107,39 @@ document.addEventListener('DOMContentLoaded', function(event){
             document.getElementById("sun").style.bottom = "0%";
         }
         else if (hours == 8 || hours == 18) {
-            document.getElementById("sun").style.bottom = "17%";
+            document.getElementById("sun").style.bottom = "10%";
         }
         else if (hours == 9 || hours == 17) {
-            document.getElementById("sun").style.bottom = "34%";
+            document.getElementById("sun").style.bottom = "20%";
         }
         else if (hours == 10 || hours == 16) {
-            document.getElementById("sun").style.bottom = "51%";
+            document.getElementById("sun").style.bottom = "30%";
         }
         else if (hours == 11 || hours == 15) {
-            document.getElementById("sun").style.bottom = "68%";
+            document.getElementById("sun").style.top = "20%";
         }
         else if (hours == 12 || hours == 14) {
-            document.getElementById("sun").style.bottom = "85%";
+            document.getElementById("sun").style.top = "20%";
         }
         else if (hours == 13) {
-            document.getElementById("sun").style.bottom = "100%";
+            document.getElementById("sun").style.top = "0%";
         }
         else if (hours == 6 || hours == 20) {
             document.getElementById("moon").style.bottom = "0%";
         }
         else if (hours == 5 || hours == 21) {
-            document.getElementById("moon").style.bottom = "20%";
+            document.getElementById("moon").style.bottom = "15%";
         }
         else if (hours == 4 || hours == 22) {
-            document.getElementById("moon").style.bottom = "40%";
+            document.getElementById("moon").style.bottom = "30%";
         }
         else if (hours == 3 || hours == 23) {
-            document.getElementById("moon").style.bottom = "60%";
+            document.getElementById("moon").style.top = "30%";
         }
         else if (hours == 2 || hours == 24) {
-            document.getElementById("moon").style.bottom = "80%";
+            document.getElementById("moon").style.top = "15%";
         } else {
-            document.getElementById("moon").style.bottom = "100%";
+            document.getElementById("moon").style.top = "0%";
         }
 
         currentTime.innerHTML = hours + ':' + minutes;

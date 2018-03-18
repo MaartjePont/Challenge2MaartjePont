@@ -59,7 +59,7 @@ body {
     margin: 40px auto 20px auto;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
 	#welcome-text {
 		font-size: 22px;
 		margin-bottom: 40px;
