@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(event){
             document.getElementById("activity-image").src = "styles/images/food.png";
         }
         else if (hours >= 19 && hours < 21) {
-            text = "Goedenavond Maartje, je kan even lekker onderuitgezakt tv te kijken!";
+            text = "Goedenavond Maartje, je kan even lekker tv kijken!";
             document.getElementById("activity-image").src = "styles/images/tv.png";
         }
         else if (hours == 21) {
