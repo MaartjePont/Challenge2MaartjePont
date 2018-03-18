@@ -58,9 +58,13 @@ document.addEventListener('DOMContentLoaded', function(event){
             text = "Goedemiddag Maartje, het is tijd om te sporten!";
             document.getElementById("activity-image").src = "styles/images/sport.png";
         }
-        else if (hours >= 18 && hours < 21) {
+        else if (hours == 18) {
             text = "Goedenavond Maartje, het is tijd om avond te eten!";
             document.getElementById("activity-image").src = "styles/images/food.png";
+        }
+        else if (hours >= 19 && hours < 21) {
+            text = "Goedenavond Maartje, je kan even lekker onderuitgezakt tv te kijken!";
+            document.getElementById("activity-image").src = "styles/images/tv.png";
         }
         else if (hours == 21) {
             text = "Goedenavond Maartje, het is tijd om je hond uit te laten!";
