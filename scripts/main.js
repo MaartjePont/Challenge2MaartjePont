@@ -1,7 +1,7 @@
 (function(){
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function(event){
+document.addEventListener('DOMContentLoaded', function(){
     var currentTime     = document.getElementById('current-time'),
         currentDate     = document.getElementById('current-date'),
         welcomeText     = document.getElementById('welcome-text'),
