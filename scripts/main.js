@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function(){
             document.getElementById("activity-image").src = "styles/images/ontbijt.png";
         }
         else if (hours == 10) {
-            text = "Goedemiddag Maartje, het is tijd om je hond uit te laten!";
+            text = "Goedemorgen Maartje, het is tijd om je hond uit te laten!";
             document.getElementById("activity-image").src = "styles/images/dog.png";
         }
         else if (hours == 11) {
