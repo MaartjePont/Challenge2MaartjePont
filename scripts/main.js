@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function(){
     var currentTime     = document.getElementById('current-time'),
         currentDate     = document.getElementById('current-date'),
         welcomeText     = document.getElementById('welcome-text'),
-        activityImage   = document.getElementById('activity-image');
+        activityImage   = document.getElementById('activity-image'),
+        sun             = document.getElementById('sun'),
+        moon            = document.getElementById('moon');
 
     setInterval(function() {
         var d = new Date();
